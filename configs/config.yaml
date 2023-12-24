@@ -1,0 +1,34 @@
+# 训练数据集，可支持多个数据集
+train_data:
+  D:/pythonProject1/data/dataset/train/train
+# 测试数据集
+test_data:
+  D:/pythonProject1/data/dataset/test
+# 类别文件
+class_name:
+  D:/pythonProject1/data/dataset/class_name.txt
+train_transform: "train"
+test_transform: "val"
+work_dir: "work_space/"
+net_type: "resnet34"
+width_mult: 1.0
+input_size: [224,224]
+rgb_mean: [0.5,0.5,0.5]
+rgb_std: [0.5,0.5,0.5]
+batch_size: 32
+lr: 0.1
+optim_type: "SGD"
+loss_type: "CrossEntropyLoss"
+momentum: 0.9
+num_epochs: 100
+num_warn_up: 3
+num_workers: 8
+weight_decay: 0.0005
+scheduler: "multi-step"
+milestones: [20,50,80]
+gpu_id: [0]
+log_freq: 50
+progress: True
+pretrained: False
+finetune: False
+
